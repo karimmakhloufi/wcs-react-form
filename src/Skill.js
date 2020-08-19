@@ -1,11 +1,11 @@
 import React from "react";
 import Proptypes from "prop-types";
 
-function Skill(props) {
+function Skill({ name, votes }) {
   return (
     <li>
-      {props.name}
-      <span className="votes">{props.votes}</span>
+      {name}
+      <span className="votes">{votes}</span>
     </li>
   );
 }

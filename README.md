@@ -8,3 +8,4 @@
 - Component structure
 - Define Props (Skill Component)
 - Props Typing
+- Props destructuring
