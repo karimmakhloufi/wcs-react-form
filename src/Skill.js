@@ -1,10 +1,10 @@
 import React from "react";
 
-function Skill() {
+function Skill(props) {
   return (
     <li>
-      HTML
-      <span className="votes">3</span>
+      {props.name}
+      <span className="votes">{props.votes}</span>
     </li>
   );
 }

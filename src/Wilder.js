@@ -16,11 +16,11 @@ function Wilder() {
       </p>
       <h4>Wild Skills</h4>
       <ul className="skills">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        <Skill name="HTML" votes={3} />
+        <Skill name="CSS" votes={2} />
+        <Skill name="React" votes={4} />
+        <Skill name="Node" votes={7} />
+        <Skill name="Typescript" votes={2} />
       </ul>
     </article>
   );
