@@ -7,3 +7,4 @@
 - HTML / CSS structure
 - Component structure
 - Define Props (Skill Component)
+- Props Typing

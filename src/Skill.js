@@ -1,4 +1,5 @@
 import React from "react";
+import Proptypes from "prop-types";
 
 function Skill(props) {
   return (
@@ -8,5 +9,10 @@ function Skill(props) {
     </li>
   );
 }
+
+Skill.propTypes = {
+  name: Proptypes.string.isRequired,
+  votes: Proptypes.number.isRequired,
+};
 
 export default Skill;
