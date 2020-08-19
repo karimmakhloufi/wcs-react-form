@@ -5,3 +5,4 @@
 ### Application structure
 
 - HTML / CSS structure
+- Component structure
