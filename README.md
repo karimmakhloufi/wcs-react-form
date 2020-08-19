@@ -9,3 +9,5 @@
 - Define Props (Skill Component)
 - Props Typing
 - Props destructuring
+- Components list (map)
+

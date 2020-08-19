@@ -3,6 +3,13 @@ import React from "react";
 import blank_profile from "./blank-profile-picture-female.png";
 import Skill from "./Skill";
 
+const skills = [
+  { name: "HTML", votes: 3 },
+  { name: "React", votes: 4 },
+  { name: "CSS", votes: 5 },
+  { name: "Typescript", votes: 3 },
+];
+
 function Wilder() {
   return (
     <article className="card">
@@ -16,11 +23,9 @@ function Wilder() {
       </p>
       <h4>Wild Skills</h4>
       <ul className="skills">
-        <Skill name="HTML" votes={3} />
-        <Skill name="CSS" votes={2} />
-        <Skill name="React" votes={4} />
-        <Skill name="Node" votes={7} />
-        <Skill name="Typescript" votes={2} />
+        {skills.map((skill) => (
+          <Skill key={skill.name} {...skill} />
+        ))}
       </ul>
     </article>
   );
