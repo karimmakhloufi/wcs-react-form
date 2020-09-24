@@ -14,4 +14,5 @@
 ### Styling
 
 - Styled components in App.js
+- Styled components in Card.js and Skill.js
 
