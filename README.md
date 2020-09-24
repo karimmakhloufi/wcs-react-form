@@ -11,3 +11,7 @@
 - Props destructuring
 - Components list (map)
 
+### Styling
+
+- Styled components in App.js
+

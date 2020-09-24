@@ -31,13 +31,6 @@ p {
   margin: 0 0 1.15em;
 }
 
-.container {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 24px;
-}
-
 header {
   background-color: #F76C6C;
   color: #fff;
@@ -50,11 +43,6 @@ footer {
 /* 
  * card-layout. css 
  */
-.card-row {
-  display: grid;
-  grid-template-columns: repeat(3, 32%);
-  justify-content: space-between;
-}
 
 .card {
   padding: 20px;
