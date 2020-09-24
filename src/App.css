@@ -31,15 +31,6 @@ p {
   margin: 0 0 1.15em;
 }
 
-header {
-  background-color: #F76C6C;
-  color: #fff;
-}
-
-footer {
-  border-top: 2px solid #F76C6C;
-}
-
 .button {
   /* Reset text link default */
   text-decoration: none;
