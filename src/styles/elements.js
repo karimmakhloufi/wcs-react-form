@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
+const colors = {
+  primary: "#f76c6c",
+};
+
 export const Header = styled.header`
-  background-color: #f76c6c;
+  background-color: ${colors.primary};
   color: #fff;
 `;
 export const Footer = styled.footer`
-  border-top: 2px solid #f76c6c;
+  border-top: 2px solid ${colors.primary};
 `;
 
 export const Container = styled.div`
@@ -34,7 +38,7 @@ export const Card = styled.article`
   }
   h3,
   h4 {
-    color: #f76c6c;
+    color: ${colors.primary};
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: start;
@@ -62,7 +66,7 @@ export const List = styled.ul`
     margin: 4px 0;
     display: flex;
     justify-content: space-around;
-    border: #f76c6c 1px solid;
+    border: ${colors.primary} 1px solid;
     border-radius: 4px;
     padding: 2px;
   }
