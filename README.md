@@ -22,3 +22,4 @@
 ### Data
 
 - Fetch data and store in state
+- Display data with Array.map

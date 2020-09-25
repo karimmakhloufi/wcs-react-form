@@ -3,29 +3,17 @@ import blank_profile from "./blank-profile-picture-female.png";
 import Skill from "./Skill";
 import { Card, List } from "./styles/elements";
 
-const skills = [
-  { name: "HTML", votes: 3 },
-  { name: "React", votes: 4 },
-  { name: "CSS", votes: 5 },
-  { name: "Typescript", votes: 3 },
-  { name: "Styled Components", votes: 10 },
-];
-
-function Wilder() {
+function Wilder({ city, name, skills }) {
   return (
     <Card>
-      <img src={blank_profile} alt="Jane Doe Profile" />
-      <h3>Jane Doe</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <img src={blank_profile} alt={`${name} Profile`} />
+      <h3>{name}</h3>
+      <h4>City</h4>
+      <p>{city}</p>
       <h4>Wild Skills</h4>
       <List>
         {skills.map((skill) => (
-          <Skill key={skill.name} {...skill} />
+          <Skill key={skill._id} {...skill} />
         ))}
       </List>
     </Card>

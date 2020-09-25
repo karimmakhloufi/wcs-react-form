@@ -5,20 +5,19 @@ import { CardRow, Container, Footer, Header } from "./styles/elements";
 import Wilder from "./Wilder";
 
 function App() {
-  const [data, setData] = useState({ wilders: [] });
+  const [wilders, setWilders] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchWilders = async () => {
       try {
         const result = await axios("http://localhost:5000/api/wilder/read");
-        console.log(result);
-        setData(result);
+        setWilders(result.data.result);
       } catch (error) {
         console.log(error);
       }
     };
 
-    fetchData();
+    fetchWilders();
   }, []);
 
   return (
@@ -31,10 +30,9 @@ function App() {
       <Container>
         <h2>Wilders</h2>
         <CardRow>
-          <Wilder />
-          <Wilder />
-          <Wilder />
-          <Wilder />
+          {wilders.map((wilder) => (
+            <Wilder key={wilder._id} {...wilder} />
+          ))}
         </CardRow>
       </Container>
       <Footer>
