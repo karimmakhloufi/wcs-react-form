@@ -79,7 +79,8 @@ export const Badge = styled.span`
   justify-content: center;
 
   /* Colors */
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: ${({ votes }) =>
+    votes > 9 ? "rgba(0, 100, 0, 0.3)" : "rgba(0, 0, 0, 0.3)"};
   color: #fff;
 
   /* Rounded border */

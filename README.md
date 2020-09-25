@@ -17,3 +17,4 @@
 - Styled components in Card.js and Skill.js
 - Create a styles folder
 - Use a "theme" color
+- Conditional style

@@ -8,6 +8,7 @@ const skills = [
   { name: "React", votes: 4 },
   { name: "CSS", votes: 5 },
   { name: "Typescript", votes: 3 },
+  { name: "Styled Components", votes: 10 },
 ];
 
 function Wilder() {
