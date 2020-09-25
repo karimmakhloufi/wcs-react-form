@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, Input, Label } from "./styles/form-elements";
 
 function AddWilder() {
+  const [name, setName] = useState("");
+  const [city, setCity] = useState("");
   return (
-    <Form>
+    <Form
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       <Label htmlFor="name-input">Name :</Label>
-      <Input id="name-input" type="text" placeholder="Type the name" />
+      <Input
+        id="name-input"
+        type="text"
+        placeholder="Type the name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <Label htmlFor="city-input">City :</Label>
-      <Input id="city-input" type="text" placeholder="Type the city" />
+      <Input
+        id="city-input"
+        type="text"
+        placeholder="Type the city"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+      />
       <Button>Add</Button>
     </Form>
   );
