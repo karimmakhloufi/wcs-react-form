@@ -48,3 +48,10 @@ export const Button = styled.button`
   display: inline-block;
   ${focus}
 `;
+
+export const Error = styled.p`
+  background-color: red;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+`;

@@ -25,5 +25,7 @@
 - Display data with Array.map
 
 ### Add form
+
 - Form structure and style
 - Control input with useState
+- POST the form data
