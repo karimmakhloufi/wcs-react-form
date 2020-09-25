@@ -23,3 +23,6 @@
 
 - Fetch data and store in state
 - Display data with Array.map
+
+### Add form
+- Form structure and style

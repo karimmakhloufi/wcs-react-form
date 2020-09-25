@@ -1,6 +1,18 @@
-/* 
- * global. css 
- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} 
+
+
+:root {
+  --input-border: #f76c6c;
+  --input-focus-h: 45;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
  body {
   font-family: sans-serif;
   color: #222;
@@ -31,13 +43,3 @@ p {
   margin: 0 0 1.15em;
 }
 
-.button {
-  /* Reset text link default */
-  text-decoration: none;
-
-  background-color: #F76C6C;
-  color: #fff;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  display: inline-block;
-}
