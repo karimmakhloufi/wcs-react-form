@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./App.css";
 import { CardRow, Container, Footer, Header } from "./styles/elements";
 import Wilder from "./Wilder";
 
 function App() {
+  const [data, setData] = useState({ wilders: [] });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await axios("http://localhost:5000/api/wilder/read");
+        console.log(result);
+        setData(result);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
       <Header>

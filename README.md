@@ -18,3 +18,7 @@
 - Create a styles folder
 - Use a "theme" color
 - Conditional style
+
+### Data
+
+- Fetch data and store in state
