@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Button, Error, Form, Input, Label } from "./styles/form-elements";
 
-function AddWilder() {
+function AddWilder(): JSX.Element {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [error, setError] = useState("");
@@ -15,15 +15,16 @@ function AddWilder() {
             name,
             city,
           });
+          // eslint-disable-next-line no-console
           console.log(result);
           if (result.data.success) {
             setError("");
           }
-        } catch (error) {
-          if (error.response) {
-            setError(error.response.data.message);
+        } catch (err) {
+          if (err.response) {
+            setError(err.response.data.message);
           } else {
-            setError(error.message);
+            setError(err.message);
           }
         }
       }}
