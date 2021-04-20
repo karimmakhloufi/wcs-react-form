@@ -69,7 +69,11 @@ export const List = styled.ul`
   }
 `;
 
-export const Badge = styled.span`
+interface IBadge {
+  votes: number;
+}
+
+export const Badge = styled.span<IBadge>`
   /* Center the content */
   align-items: center;
   display: flex;
