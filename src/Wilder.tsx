@@ -3,13 +3,15 @@ import blank_profile from "./blank-profile-picture-female.png";
 import Skill from "./Skill";
 import { Card, List } from "./styles/elements";
 
-interface WilderProps {
+import { ISkill } from "./Skill";
+
+interface IWilder {
   city: string;
   name: string;
-  skills: any[];
+  skills: ISkill[];
 }
 
-function Wilder({ city, name, skills }: WilderProps) {
+function Wilder({ city, name, skills }: IWilder) {
   return (
     <Card>
       <img src={blank_profile} alt={`${name} Profile`} />

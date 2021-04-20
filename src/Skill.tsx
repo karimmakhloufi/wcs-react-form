@@ -2,12 +2,13 @@ import React from "react";
 import Proptypes from "prop-types";
 import { Badge } from "./styles/elements";
 
-interface SkillProps {
+export interface ISkill {
+  _id: string;
   title: string;
   votes: number;
 }
 
-function Skill({ title, votes }: SkillProps) {
+function Skill({ title, votes }: ISkill) {
   return (
     <li>
       {title}
