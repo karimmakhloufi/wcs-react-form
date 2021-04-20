@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "./globals";
+import colors from "./globals";
 
 export const Header = styled.header`
   background-color: ${colors.primary};

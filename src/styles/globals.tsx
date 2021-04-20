@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   primary: "#f76c6c",
   focus: {
     h: 45,
@@ -6,3 +6,5 @@ export const colors = {
     l: "42%",
   },
 };
+
+export default colors;
