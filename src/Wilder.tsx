@@ -5,7 +5,8 @@ import { Card, List } from "./styles/elements";
 
 import { ISkill } from "./Skill";
 
-interface IWilder {
+export interface IWilder {
+  _id: string;
   city: string;
   name: string;
   skills: ISkill[];

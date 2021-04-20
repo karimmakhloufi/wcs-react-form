@@ -5,8 +5,10 @@ import { CardRow, Container, Footer, Header } from "./styles/elements";
 import Wilder from "./Wilder";
 import AddWilder from "./AddWilder";
 
+import { IWilder } from "./Wilder";
+
 function App() {
-  const [wilders, setWilders] = useState([]);
+  const [wilders, setWilders] = useState<IWilder[]>([]);
 
   useEffect(() => {
     const fetchWilders = async () => {
