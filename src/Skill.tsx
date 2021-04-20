@@ -3,12 +3,12 @@ import Proptypes from "prop-types";
 import { Badge } from "./styles/elements";
 
 export interface ISkill {
-  _id: string;
+  _id?: string;
   title: string;
   votes: number;
 }
 
-function Skill({ title, votes }: ISkill) {
+function Skill({ title, votes }: ISkill): JSX.Element {
   return (
     <li>
       {title}
