@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 import { CardRow, Container, Footer, Header } from "./styles/elements";
-import Wilder from "./Wilder";
+import Wilder, { IWilder } from "./Wilder";
 import AddWilder from "./AddWilder";
 
-import { IWilder } from "./Wilder";
-
-function App() {
+function App(): JSX.Element {
   const [wilders, setWilders] = useState<IWilder[]>([]);
 
   useEffect(() => {
@@ -16,6 +14,7 @@ function App() {
         const result = await axios("http://localhost:5000/api/wilders");
         setWilders(result.data.result);
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.log(error);
       }
     };
@@ -37,7 +36,13 @@ function App() {
         <h2>Wilders</h2>
         <CardRow>
           {wilders.map((wilder) => (
-            <Wilder key={wilder._id} {...wilder} />
+            <Wilder
+              // eslint-disable-next-line no-underscore-dangle
+              key={wilder._id}
+              city={wilder.city}
+              name={wilder.city}
+              skills={wilder.skills}
+            />
           ))}
         </CardRow>
       </Container>
