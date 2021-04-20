@@ -1,9 +1,16 @@
 import React from "react";
 import blank_profile from "./blank-profile-picture-female.png";
-import Skill from "./Skill";
+import Skill, { ISkill } from "./Skill";
 import { Card, List } from "./styles/elements";
 
-function Wilder({ city, name, skills }) {
+export interface IWilder {
+  _id?: string;
+  city: string;
+  name: string;
+  skills: ISkill[];
+}
+
+function Wilder({ city, name, skills }: IWilder): JSX.Element {
   return (
     <Card>
       <img src={blank_profile} alt={`${name} Profile`} />
@@ -13,7 +20,8 @@ function Wilder({ city, name, skills }) {
       <h4>Wild Skills</h4>
       <List>
         {skills.map((skill) => (
-          <Skill key={skill._id} {...skill} />
+          // eslint-disable-next-line no-underscore-dangle
+          <Skill key={skill._id} title={skill.title} votes={skill.votes} />
         ))}
       </List>
     </Card>
