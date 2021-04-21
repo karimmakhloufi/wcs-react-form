@@ -1,10 +1,30 @@
 import React from "react";
+import { useQuery, gql } from "@apollo/client";
 import "./App.css";
 import { CardRow, Container, Footer, Header } from "./styles/elements";
 import Wilder from "./Wilder";
 import AddWilder from "./AddWilder";
 
+const ALL_WILDERS = gql`
+  query GetAllWilders {
+    allWilders {
+      id
+      name
+      city
+      skills {
+        id
+        title
+        votes
+      }
+    }
+  }
+`;
+
 function App() {
+  const { loading, error, data } = useQuery(ALL_WILDERS);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
   return (
     <div>
       <Header>
@@ -18,7 +38,7 @@ function App() {
       <Container>
         <h2>Wilders</h2>
         <CardRow>
-          {wilders.map((wilder) => (
+          {data.allWilders.map((wilder) => (
             <Wilder key={wilder._id} {...wilder} />
           ))}
         </CardRow>
