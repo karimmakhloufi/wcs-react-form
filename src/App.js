@@ -1,26 +1,10 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import "./App.css";
 import { CardRow, Container, Footer, Header } from "./styles/elements";
 import Wilder from "./Wilder";
 import AddWilder from "./AddWilder";
 
 function App() {
-  const [wilders, setWilders] = useState([]);
-
-  useEffect(() => {
-    const fetchWilders = async () => {
-      try {
-        const result = await axios("http://localhost:5000/api/wilders");
-        setWilders(result.data.result);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchWilders();
-  }, []);
-
   return (
     <div>
       <Header>
